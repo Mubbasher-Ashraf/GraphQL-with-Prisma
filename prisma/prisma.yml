@@ -1,0 +1,14 @@
+#endpoint: ''
+endpoint: https://eu1.prisma.sh/mubbasher-ashraf/hackerNews-Node/dev
+
+
+datamodel: datamodel.prisma
+
+
+generate:
+  - generator: javascript-client
+    output: '../src/generated/prisma-client'
+
+hooks:
+  post-deploy:
+    - prisma generate
